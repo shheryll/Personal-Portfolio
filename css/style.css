@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111;
+    color: #fff;
+}
+
+/* Button styling */
+.button-group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+
+  
+  /* Make sure contact-btn loses fixed positioning */
+  .contact-btn {
+    position: static; /* reset fixed */
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease;
+    z-index: auto;
+    font-size: 20px;
+  }
+  
+  .contact-btn:hover {
+    background: #ff3b3f;
+    color: #fff;
+    border: 2px solid #ff3b3f;
+  }
+  
+  /* The hero-btn (Download CV) styling should already be fine */
+  /* but to keep consistency: */
+  .hero-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    font-size: 20px;
+  }
+  
+  .hero-btn:hover {
+    background: #ff3b3f;
+    color: #fff;
+    border: 2px solid #ff3b3f;
+}
+  
+  /* Modal overlay */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    font-size: 20px;
+  }
+  
+  /* Show modal when active */
+  .modal-overlay.active {
+    display: block;
+   }
+
+  /* Modal content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: #333;
+    font-size: 20px;
+  }
+  
+  /* Close button */
+  .modal-content .close {
+    color: #aaa;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .modal-content .close:hover {
+    color: black;
+  }
+  
+  /* Links inside modal */
+  .modal-content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .modal-content li {
+    margin: 15px 0;
+    font-size: 16px;
+  }
+  
+  .modal-content a {
+    color: #0073b1;
+    text-decoration: none;
+  }
+
+
+.text-box {
+    width: 100%;
+    max-width: none;          /* Remove max-width to let it align with full container */
+    padding: 100px 10%;       /* Match horizontal padding with Projects section */
+    text-align: left;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+}
+
+.text-box h1 {
+    font-size: 100px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.text-box h2 {
+    font-size: 35px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.text-box p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+@media(max-width: 1000px){
+    .text-box h1{
+        font-size: 20px;
+    } 
+}
+
+@media(max-width: 1000px){
+    .row {
+        flex-direction: column;
+    }
+}
+
+.icons {
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+/* new: project cards layout */
+/* Container for header section */
+body {
+    background-color: #111;
+    font-family: 'Inter', sans-serif;
+    color: white;
+  }
+  
+  /* Header */
+  .projects-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 10%;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  /* Remove any background or box styles if present */
+
+  .projects-text {
+    flex: 2;
+    min-width: 300px;
+  }
+  
+  .projects-text h1 {
+    font-size: 65px;
+    font-weight: 800;
+    text-align: left;
+  }
+  
+  
+/* Remove any background or box styles if present */
+
+  
+  .projects-name {
+    flex: 1;
+    text-align: right;
+    min-width: 150px;
+  }
+  
+  /* Grid */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 400px);
+    justify-content: start;        /* Align to the left */
+    gap: 35px;
+    padding-left: 10%;              /* Matches section-heading left padding */
+  }
+  
+
+  .section-heading {
+    color: #ff3b3f;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: left;
+    padding: 0 10%;
+    margin: 50px 0 20px;
+    display: inline-block;
+  }
+  
+  .underline-red {
+    color: #ff3b3f;
+    border-bottom: 2px solid #ff3b3f;
+    display: inline-block;
+    padding-bottom: 2px;
+  }
+  /* Cards */
+  .project-card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 30px;
+    width: 400px; /* match fixed width in grid */
+    height: 400px; /* fixed height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.12);
+  }
+  
+  .project-card h3 {
+    color: #ff3b3f;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .project-card p {
+    color: #ccc;
+    flex-grow: 1;
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    object-fit: cover;
+  }
+
+  
+  .tech-tags span {
+    background-color: #292929;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-right: 8px;
+    color: #fff;
+    display: inline-block;
+    margin-top: 5px;
+  }
+  
+
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  

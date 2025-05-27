@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+
+    <section class="header">
+
+        <div class="text-box">
+            <h1>Sheryl Ng</h1>
+            <h2><span style="color: #ff3b3f;"> Penultimate Economics and Data Science student</span></h2>
+            <p>I’m interested in <span style="color: #ff3b3f;">machine learning, 
+              particularly its applications in the finance sector</span>. Currently on a gap year with the intention of deepening my skills, I'm working on personal projects 
+              such as exploring algorithms that help optimise portfolio construction and price prediction. I’m <span style="color: #ff3b3f;">proficient 
+              in Python</span> and have experience with <span style="color: #ff3b3f;">SQL, C, Excel, VBA, CSS, JavaScript, HTML, and Tableau</span>. 
+              <br>
+              <br>
+              I love travelling and capturing moments through photos, postcards, and videos. I especially enjoy making vintage-style 
+              montages that evoke nostalgia and bring memories to life. <span style="color: #ff3b3f;">Do check out my postcard  
+              collection <a href="travel.html"><span style="text-decoration: underline; font-weight: bold; color: #ff3b3f;">here!</span></a></span>
+            </p>
+            <div class="button-group">
+              <a href="Sheryl Ng's CV [17_3_2025].pdf" download="Sheryl Ng's CV [17_3_2025].pdf" class="hero-btn">
+                Download my CV
+              </a>
+              <button onclick="toggleModal()" class="contact-btn">Contact me!
+              </button>
+            </div>
+            
+            <!-- Modal -->
+            <div id="contactModal" class="modal-overlay">
+              <div class="modal-content">
+                <span class="close" onclick="toggleModal()">&times;</span>
+                <h2>Get in touch!</h2>
+                <ul>
+                  <li><i class="fas fa-envelope"></i> sheryl.nqr@gmail.com</li>
+                  <li><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/shhheryll07" target="_blank">LinkedIn</a></li>
+                  <li><i class="fab fa-github"></i> <a href="https://github.com/shheryll" target="_blank">GitHub</a></li>
+                  <li><i class="fab fa-instagram"></i> <a href="https://instagram.com/sher.film" target="_blank">Instagram</a></li>
+                </ul>
+              </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="projects-header">
+        <div class="projects-text">
+          <h1><span style="text-decoration: underline;">Projects</span></h1>
+        </div>
+      </div>
+    
+      <!-- Accordion Section -->
+    <h2 class="section-heading"><span class="underline-red">Predictions</span></h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Food Preference Prediction</h3>
+          <p>Developed a multi-class logistic regression model (one-vs-all strategy)
+             and Bag-of-Words features to predict food preferences, optimized with 
+            mini-batch SGD and feature selection of the top 10 most frequent words.
+          <br>
+          <br>
+          <span style="font-weight: bold; font-style: italic;">
+            Results: 0.846 test accuracy, 0.409 test loss
+           </span>
+      </p>
+          <div class="tech-tags">
+            <span>Python</span>
+            <span>numpy</span>
+            <span>pandas</span>
+            <span>matplotlib</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3>Human Mobility Prediction</h3>
+          <p>Designed Convolutional Neural Networks (CNNs) and Long Short-Term Memory (LSTM)
+            deep learning model to predict missing data in human mobility dataset
+            <br>
+            <br>
+            <span style="font-weight: bold; font-style: italic;">
+              Results: MAE and Euclidean Distance hovered around 3 with improved performance as data size increased
+            </span>
+            </p>
+          <div class="tech-tags">
+            <span>Python</span>
+            <span>TensorFlow</span>
+            <span>Keras</span>
+            <span>pandas</span>
+            <span>matplotlib</span>
+            <span>seaborn</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3>Recommender Systems</h3>
+          <p>Together with a team, built and evaluated and compared the results 
+            (computational costs and accuracy) of TF-IDF, 
+            Neural Collaborative Filtering (NCF), Weighted Hybrid, 
+            Deep Neural Network models
+            <br>
+            <br>
+            <span style="font-weight: bold; font-style: italic;">
+             Findings: NCF had the best performance across
+                       the evaluation metrics used.
+            </span>
+            </p>
+          <div class="tech-tags">
+            <span>Python</span>
+            <span>TensorFlow</span>
+            <span>PyTorch</span>
+            <span>scikit-learn</span>
+            <span>pandas</span>
+            <span>numpy</span>
+            <span>scipy</span>
+            <span>tqdm</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <h3>Cirrhosis Prediction</h3>
+          <p>Compared Random Forest, Logistic Regression, kNN, and Bagging Classifier models 
+             in predicting early or late-stage liver cirrhosis.
+            <br>
+            <br>
+            <span style="font-weight: bold; font-style: italic;">
+             Results: Random Forest had the best performance with 71.5% accuracy
+            </span>
+          </p>
+          <div class="tech-tags">
+            <span>Python</span>
+            <span>scikit-learn</span>
+            <span>pandas</span>
+            <span>seaborn</span>
+            <span>matplotlib</span>
+            <span>sklearn.metrics</span>
+          </div>
+        </div>
+      </div>
+
+
+    
+    <!-- Economics and Finance -->
+    <h2 class="section-heading"><span class="underline-red">Economics and Finance</span></h2>
+      <div class="projects-grid">
+          <div class="project-card">
+            <h3>Economic Assumption Violations</h3>
+            <p> Accessed the validity of EMH, CAPM and FF3 during the 2008 Global Financial Crisis  
+              using GARCH model and Ljung-Box test.
+              <br>
+              Data: historical closing price from S&P 500.
+              <br>
+              <br>
+              <span style="font-weight: bold; font-style: italic;">
+              Findings: While EMH held prior to the crisis, both EMH and CAPM did not
+              hold during the periods of high volatility. 
+              </span>
+            </p>
+            <div class="tech-tags">
+              <span>Python</span>
+              <span>statsmodels</span>
+              <span>numpy</span>
+              <span>pandas</span>
+              <span>scipy</span>
+            </div>
+          </div>
+          <div class="project-card">
+            <h3>Dollar Cost Averaging vs Lump Sum Investments</h3>
+            <p> Compared these investment strategies based on their 
+                returns under varying market conditions using the 
+                Straits Times Index Exchange Traded Fund (STI ETF).
+                <br>
+                <br>
+                <span style="font-weight: bold; font-style: italic;">
+                Findings: Lump Sum performs better in bullish markets,
+                while DCA is more effective in bearish or volatile 
+                conditions—especially for risk-averse investors. 
+                </span>
+          </div>
+        </div>
+
+    
+    <!-- Data Visualisation -->
+    <h2 class="section-heading"><span class="underline-red">Data Visualisation</span></h2>
+      <div class="projects-grid">
+          <div class="project-card">
+            <h3>Prosperity or Planet</h3>
+            <p>A data visualization project exploring the possibility of sustainable economic growth.
+            </p>
+            <img src="css/images/graph.jpg" alt="Prosperity or Planet visualization" class="project-image">
+            <div class="tech-tags">
+              <span>Python</span>
+              <span>matplotlib</span>
+              <span>seaborn</span>
+              <span>plotly</span>
+              <span>pandas</span>
+              <span>D3.js</span>
+            </div>
+          </div>
+      </div>
+
+    </section>
+    
+    
+
+    <script src="js/main.js"></script>
+
+
+</body>
+</html>
