@@ -97,7 +97,7 @@ body.settings-page {
   /* Ensure flip cards maintain proper structure on mobile */
   .flip-card {
     width: 100%;
-    height: auto;
+    height: 100%;
     min-height: 250px; /* Adjust as needed */
     margin-bottom: 20px;
     perspective: 1000px;
@@ -165,18 +165,11 @@ body.settings-page {
     padding: 0 15px;
   }
 
-  /* Alternative: If using flexbox */
-  .settings-gallery {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 0 15px;
-  }
 
   /* Ensure regular cards have consistent styling with flip cards */
   .card {
     width: 100%;
-    min-height: 250px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
@@ -184,7 +177,7 @@ body.settings-page {
 
   .card img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     flex-shrink: 0;
   }
