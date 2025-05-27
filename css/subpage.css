@@ -89,19 +89,122 @@ body.settings-page {
   .settings-gallery {
     grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
     justify-content: center;
-    overflow: auto;
   }
 }
 
 /* Mobile: max width 480px */
 @media (max-width: 480px) {
+  /* Ensure flip cards maintain proper structure on mobile */
+  .flip-card {
+    width: 100%;
+    height: auto;
+    min-height: 250px; /* Adjust as needed */
+    margin-bottom: 20px;
+    perspective: 1000px;
+    background-color: transparent;
+  }
+
+  .flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 250px; /* Match the flip-card min-height */
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-front, .flip-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 250px; /* Consistent height */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .flip-back {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card.flipped .flip-inner {
+    transform: rotateY(180deg);
+  }
+
+  /* Ensure images scale properly on mobile */
+  .flip-front img, .flip-back img {
+    width: 100%;
+    height: auto;
+    max-height: 180px; /* Prevent images from being too tall */
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  /* Text styling for mobile */
+  .flip-front .location, .flip-back .location {
+    font-size: 14px;
+    padding: 8px;
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .flip-front .year, .flip-back .year {
+    font-size: 12px;
+    padding: 4px 8px 8px 8px;
+    margin: 0;
+  }
+
+  /* If you're using CSS Grid, ensure single column on mobile */
   .settings-gallery {
-    grid-template-columns: repeat(1, 1fr); /* 1 card per row */
-    justify-content: center;
-    overflow: auto;
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 15px;
+    padding: 0 15px;
+  }
+
+  /* Alternative: If using flexbox */
+  .settings-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 15px;
+  }
+
+  /* Ensure regular cards have consistent styling with flip cards */
+  .card {
+    width: 100%;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  /* Touch-friendly flip interaction */
+  .flip-card {
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Prevent scrolling issues during flip animation */
+  .flip-card.flipped {
+    overflow: hidden;
   }
 }
-  
+
+
 /* Style for each postcard */
 .card {
 background-color: transparent;
