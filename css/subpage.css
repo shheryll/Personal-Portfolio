@@ -139,7 +139,6 @@ body.settings-page {
   .flip-front img, .flip-back img {
     width: 100%;
     height: auto;
-    max-height: 180px; /* Prevent images from being too tall */
     object-fit: cover;
     flex-shrink: 0;
   }
@@ -186,7 +185,6 @@ body.settings-page {
   .card img {
     width: 100%;
     height: auto;
-    max-height: 180px;
     object-fit: cover;
     flex-shrink: 0;
   }
