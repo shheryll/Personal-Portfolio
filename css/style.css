@@ -158,22 +158,25 @@ body {
 
 @media (max-width: 768px) {
     .projects-grid {
-      grid-template-columns: 1fr; /* Stack cards */
-      padding-left: 5%;
-      justify-content: center;
+      grid-template-columns: 1fr;  /* one card per row */
+      justify-content: center;     /* center cards horizontally */
+      padding-left: 0;             /* remove left padding */
+      padding-right: 0;            /* optionally remove right padding */
+      margin: 0 auto;              /* center the container */
     }
   
+    .project-card {
+      width: 90vw;                 /* make card width responsive on mobile */
+      max-width: 400px;            /* max width to prevent it from getting too large */
+    }
+  
+    /* Adjust text sizes, if needed */
     .text-box h1 {
       font-size: 2.5rem;
     }
   
     .text-box h2 {
       font-size: 1.5rem;
-    }
-  
-    .project-card {
-      width: 100%;
-      height: auto;
     }
   }
   
@@ -312,3 +315,9 @@ body {
     to { opacity: 1; transform: translateY(0); }
   }
   
+  
+/* Make sure the body allows scrolling */
+body {
+    overflow-x: hidden; /* disable horizontal scroll */
+    overflow-y: auto;   /* enable vertical scroll */
+  }
