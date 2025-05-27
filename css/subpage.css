@@ -89,6 +89,7 @@ body.settings-page {
   .settings-gallery {
     grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
     justify-content: center;
+    overflow: auto;
   }
 }
 
@@ -97,6 +98,7 @@ body.settings-page {
   .settings-gallery {
     grid-template-columns: repeat(1, 1fr); /* 1 card per row */
     justify-content: center;
+    overflow: auto;
   }
 }
   
@@ -193,8 +195,3 @@ color: #999;
   display: block;
 }
 
-/* Make sure the body allows scrolling */
-body {
-  overflow-x: hidden; /* disable horizontal scroll */
-  overflow-y: auto;   /* enable vertical scroll */
-}
