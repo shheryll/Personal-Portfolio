@@ -30,7 +30,22 @@ body.settings-page {
   font-size: 50px;
 }
 
+/* Tablet view: smaller text and adjusted vertical position */
+@media (max-width: 768px) {
+  .intro-video .overlay-text {
+    font-size: 32px;
+    top: 25%;
+  }
+}
 
+/* Mobile view: even smaller text and lower vertical position */
+@media (max-width: 480px) {
+  .intro-video .overlay-text {
+    font-size: 24px;
+    top: 40%;
+    padding: 0 5px;
+  }
+}
 /* Grid for 5 postcards per row */
 
 .settings-container {
@@ -178,3 +193,8 @@ color: #999;
   display: block;
 }
 
+/* Make sure the body allows scrolling */
+body {
+  overflow-x: hidden; /* disable horizontal scroll */
+  overflow-y: auto;   /* enable vertical scroll */
+}
