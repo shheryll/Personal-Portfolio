@@ -68,6 +68,22 @@ body.settings-page {
   gap: 20px; /* space between postcards */
   justify-items: center;
 }
+
+/* Tablets: max width 768px */
+@media (max-width: 768px) and (min-width: 481px) {
+  .settings-gallery {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    justify-content: center;
+  }
+}
+
+/* Mobile: max width 480px */
+@media (max-width: 480px) {
+  .settings-gallery {
+    grid-template-columns: repeat(1, 1fr); /* 1 card per row */
+    justify-content: center;
+  }
+}
   
 /* Style for each postcard */
 .card {

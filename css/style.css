@@ -156,17 +156,27 @@ body {
     margin-bottom: 30px;
 }
 
-@media(max-width: 1000px){
-    .text-box h1{
-        font-size: 20px;
-    } 
-}
-
-@media(max-width: 1000px){
-    .row {
-        flex-direction: column;
+@media (max-width: 768px) {
+    .projects-grid {
+      grid-template-columns: 1fr; /* Stack cards */
+      padding-left: 5%;
+      justify-content: center;
     }
-}
+  
+    .text-box h1 {
+      font-size: 2.5rem;
+    }
+  
+    .text-box h2 {
+      font-size: 1.5rem;
+    }
+  
+    .project-card {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
 
 .icons {
     margin: 0 13px;
