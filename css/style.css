@@ -237,6 +237,18 @@ body {
     padding-left: 10%;              /* Matches section-heading left padding */
   }
   
+.special-card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  grid-column: 1 / -1; /* span entire row */
+}
 
   .section-heading {
     color: #ff3b3f;
